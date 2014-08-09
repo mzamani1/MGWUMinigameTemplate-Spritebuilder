@@ -9,7 +9,7 @@
 
 @implementation MyCharacter {
     float _velYPrev; // this tracks the previous velocity, it's used for animation
-    BOOL _isIdling; // these BOOLs track what animations have been triggered.  By default, they're set to NO
+    BOOL _isRunning; // these BOOLs track what animations have been triggered.  By default, they're set to NO
     BOOL _isJumping;
     BOOL _isFalling;
     BOOL _isLanding;
@@ -19,9 +19,9 @@
     if ((self = [super init])) {
         // Initialize any arrays, dictionaries, etc in here
         
-        // We initialize _isIdling to be YES, because we want the character to start idling
+        // We initialize _isRunning to be YES, because we want the character to start idling
         // (Our animation code relies on this)
-        _isIdling = YES;
+        _isRunning = YES;
         // by default, a BOOL's value is NO, so the other BOOLs are NO right now
     }
     return self;
@@ -29,7 +29,8 @@
 
 -(void)didLoadFromCCB {
     // Set up anything connected to Sprite Builder here
-    [self performSelector:@selector(startRunningRight) withObject:nil];
+    
+    //[self performSelector:@selector(startRunningRight) withObject:nil];
     
 }
 
@@ -55,15 +56,15 @@
     // IDLE
     // The animation should be idle if the character was and is stationary
     // The character may only start idling if he or she was not already idling or falling
-    if (_velYPrev == 0 && self.physicsBody.velocity.y == 0 && !_isIdling && !_isFalling) {
+    if (_velYPrev == 0 && self.physicsBody.velocity.y == 0 && !_isRunning && !_isFalling) {
         [self resetBools];
-        _isIdling = YES;
-        [self.animationManager runAnimationsForSequenceNamed:@"AnimIsoIdling"];
+        _isRunning = YES;
+        [self.animationManager runAnimationsForSequenceNamed:@"AnimSideWalking"];
     }
     // JUMP
     // The animation should be jumping if the character wasn't moving up, but now is
     // The character may only start jumping if he or she was idling and isn't jumping
-    else if (_velYPrev == 0 && self.physicsBody.velocity.y > 0 && _isIdling && !_isJumping) {
+    else if (_velYPrev == 0 && self.physicsBody.velocity.y > 0 && _isRunning && !_isJumping) {
         [self resetBools];
         _isJumping = YES;
         [self.animationManager runAnimationsForSequenceNamed:@"AnimIsoJump"];
@@ -92,7 +93,7 @@
 
 // This method is called before setting one to YES, so that only one is ever YES at a time
 -(void)resetBools {
-    _isIdling = NO;
+    _isRunning = NO;
     _isJumping = NO;
     _isFalling = NO;
     _isLanding = NO;

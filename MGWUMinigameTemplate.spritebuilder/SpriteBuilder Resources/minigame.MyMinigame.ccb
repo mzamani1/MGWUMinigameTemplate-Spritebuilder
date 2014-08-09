@@ -159,6 +159,87 @@
 								<string>_character</string>
 								<key>memberVarAssignmentType</key>
 								<integer>1</integer>
+								<key>physicsBody</key>
+								<dict>
+									<key>affectedByGravity</key>
+									<true/>
+									<key>allowsRotation</key>
+									<false/>
+									<key>bodyShape</key>
+									<integer>0</integer>
+									<key>collisionCategories</key>
+									<array/>
+									<key>collisionMask</key>
+									<array/>
+									<key>collisionType</key>
+									<string></string>
+									<key>cornerRadius</key>
+									<real>0.0</real>
+									<key>density</key>
+									<real>1</real>
+									<key>dynamic</key>
+									<true/>
+									<key>elasticity</key>
+									<real>0.30000001192092896</real>
+									<key>friction</key>
+									<real>0.30000001192092896</real>
+									<key>points</key>
+									<array>
+										<array>
+											<real>3.875</real>
+											<real>-3.5546875</real>
+										</array>
+										<array>
+											<real>3.3125152587890625</real>
+											<real>43.027351379394531</real>
+										</array>
+										<array>
+											<real>40.832046508789062</real>
+											<real>96.007827758789062</real>
+										</array>
+										<array>
+											<real>92.464859008789062</real>
+											<real>94.660171508789062</real>
+										</array>
+										<array>
+											<real>123.42581176757812</real>
+											<real>44.207038879394531</real>
+										</array>
+										<array>
+											<real>125.39065551757812</real>
+											<real>-5.1171875</real>
+										</array>
+									</array>
+									<key>polygons</key>
+									<array>
+										<array>
+											<array>
+												<real>125.39065551757812</real>
+												<real>-5.1171875</real>
+											</array>
+											<array>
+												<real>123.42581176757812</real>
+												<real>44.207038879394531</real>
+											</array>
+											<array>
+												<real>92.464859008789062</real>
+												<real>94.660171508789062</real>
+											</array>
+											<array>
+												<real>40.832046508789062</real>
+												<real>96.007827758789062</real>
+											</array>
+											<array>
+												<real>3.3125152587890625</real>
+												<real>43.027351379394531</real>
+											</array>
+											<array>
+												<real>3.875</real>
+												<real>-3.5546875</real>
+											</array>
+										</array>
+									</array>
+								</dict>
 								<key>properties</key>
 								<array>
 									<dict>
@@ -176,8 +257,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>0.16901408135890961</real>
-											<real>0.22187499701976776</real>
+											<real>0.16373239457607269</real>
+											<real>0.53437501192092896</real>
 											<integer>0</integer>
 											<integer>2</integer>
 											<integer>2</integer>
@@ -205,6 +286,8 @@
 										<string>MyCharacter.ccb</string>
 									</dict>
 								</array>
+								<key>selected</key>
+								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
@@ -303,7 +386,7 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>485</real>
+											<real>387</real>
 											<real>55</real>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -765,8 +848,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>-64</real>
-											<real>0.0</real>
+											<real>-65</real>
+											<real>14</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -790,8 +873,8 @@
 										<string>ScaleLock</string>
 										<key>value</key>
 										<array>
-											<real>1.1467337608337402</real>
-											<real>5.1133217811584473</real>
+											<real>1.1317621469497681</real>
+											<real>4.5480589866638184</real>
 											<false/>
 											<integer>0</integer>
 										</array>
@@ -850,7 +933,7 @@
 							<key>density</key>
 							<real>1</real>
 							<key>dynamic</key>
-							<true/>
+							<false/>
 							<key>elasticity</key>
 							<real>0.30000001192092896</real>
 							<key>friction</key>
@@ -864,6 +947,10 @@
 								<array>
 									<real>0.0</real>
 									<real>320</real>
+								</array>
+								<array>
+									<real>329.85159301757812</real>
+									<real>320.78909301757812</real>
 								</array>
 								<array>
 									<real>568</real>
@@ -884,6 +971,10 @@
 									<array>
 										<real>568</real>
 										<real>320</real>
+									</array>
+									<array>
+										<real>329.85159301757812</real>
+										<real>320.78909301757812</real>
 									</array>
 									<array>
 										<real>0.0</real>
@@ -913,8 +1004,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.4982394278049469</real>
-									<real>0.50312501192092896</real>
+									<real>0.0</real>
+									<real>0.0</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -977,8 +1068,6 @@
 								<real>0.5</real>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -1516,9 +1605,9 @@
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
-			<real>2.2775907516479492</real>
+			<real>0.0</real>
 			<key>position</key>
-			<real>5.8666667938232422</real>
+			<real>1.4666666984558105</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

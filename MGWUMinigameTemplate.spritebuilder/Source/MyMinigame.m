@@ -19,7 +19,7 @@
     return self;
 }
 
-- (void) beginRunning {
+- (void) followCharacter {
     self.position = ccp(0, 0);
     CCAction *follow = [CCActionFollow actionWithTarget:_hero worldBoundary:self.boundingBox];
     [_contentNode runAction:follow];
@@ -31,8 +31,9 @@
     // We're calling a public method of the character that tells it to jump!
     //[self.hero jump];
     
-    [self beginRunning];
-    [self.hero run];
+    [self followCharacter];
+    
+    //[self.hero run];
 }
 
 -(void)onEnter {
