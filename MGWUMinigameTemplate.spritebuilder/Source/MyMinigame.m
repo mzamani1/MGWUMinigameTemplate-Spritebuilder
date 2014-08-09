@@ -7,7 +7,9 @@
 
 #import "MyMinigame.h"
 
-@implementation MyMinigame
+@implementation MyMinigame {
+    CCNode *_contentNode;
+}
 
 -(id)init {
     if ((self = [super init])) {
@@ -17,11 +19,20 @@
     return self;
 }
 
+- (void) beginRunning {
+    self.position = ccp(0, 0);
+    CCAction *follow = [CCActionFollow actionWithTarget:_hero worldBoundary:self.boundingBox];
+    [_contentNode runAction:follow];
+}
+
 -(void)didLoadFromCCB {
     // Set up anything connected to Sprite Builder here
     
     // We're calling a public method of the character that tells it to jump!
-    [self.hero jump];
+    //[self.hero jump];
+    
+    [self beginRunning];
+    [self.hero run];
 }
 
 -(void)onEnter {

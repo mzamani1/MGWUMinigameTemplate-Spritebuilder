@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>23</integer>
+	<integer>0</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -2315,7 +2315,7 @@
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<false/>
+						<true/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3594,7 +3594,7 @@
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<false/>
+						<true/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4838,6 +4838,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -6036,6 +6038,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -9249,7 +9253,7 @@
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<true/>
+						<false/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -9358,6 +9362,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -11647,7 +11653,7 @@
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<true/>
+						<false/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -12781,7 +12787,7 @@
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<true/>
+						<false/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -14957,7 +14963,7 @@
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<false/>
+						<true/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -15040,8 +15046,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -18959,8 +18963,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.05000000074505806</real>
-							<real>0.80000001192092896</real>
+							<real>0.10000000149011612</real>
+							<real>0.30000001192092896</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -19020,6 +19024,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -21705,8 +21711,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.94999998807907104</real>
-							<real>0.80000001192092896</real>
+							<real>0.89999997615814209</real>
+							<real>0.30000001192092896</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -21766,6 +21772,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -22143,7 +22151,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.96666663885116577</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -22215,7 +22223,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>0.10000000149011612</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -22287,7 +22295,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.3333333432674408</real>
+			<real>0.13333334028720856</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
