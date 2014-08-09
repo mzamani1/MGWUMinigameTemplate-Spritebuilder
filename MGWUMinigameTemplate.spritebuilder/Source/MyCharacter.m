@@ -53,9 +53,12 @@
 }
 
 -(void)updateAnimations:(CCTime)delta {
-    // IDLE
+    // RUN
     // The animation should be idle if the character was and is stationary
     // The character may only start idling if he or she was not already idling or falling
+    CCLOG(@"Velocity previous: %f", _velYPrev);
+    CCLOG(@"Y-direction velocity: %f", self.physicsBody.velocity.y);
+    
     if (_velYPrev == 0 && self.physicsBody.velocity.y == 0 && !_isRunning && !_isFalling) {
         [self resetBools];
         _isRunning = YES;
@@ -67,7 +70,7 @@
     else if (_velYPrev == 0 && self.physicsBody.velocity.y > 0 && _isRunning && !_isJumping) {
         [self resetBools];
         _isJumping = YES;
-        [self.animationManager runAnimationsForSequenceNamed:@"AnimIsoJump"];
+        [self.animationManager runAnimationsForSequenceNamed:@"AnimSideJump"];
     }
     // FALLING
     // The animation should be falling if the character's moving down, but was moving up or stalled
@@ -75,7 +78,7 @@
     else if (_velYPrev >= 0 && self.physicsBody.velocity.y < 0 && _isJumping && !_isFalling) {
         [self resetBools];
         _isFalling = YES;
-        [self.animationManager runAnimationsForSequenceNamed:@"AnimIsoFalling" tweenDuration:0.5f];
+        [self.animationManager runAnimationsForSequenceNamed:@"AnimSideFalling" tweenDuration:0.5f];
     }
     // LANDING
     // The animation sholud be landing if the character's stopped moving down (hit something)
@@ -83,7 +86,7 @@
     else if (_velYPrev < 0 && self.physicsBody.velocity.y >= 0 && _isFalling && !_isLanding) {
         [self resetBools];
         _isLanding = YES;
-        [self.animationManager runAnimationsForSequenceNamed:@"AnimIsoLand"];
+        [self.animationManager runAnimationsForSequenceNamed:@"AnimSideLand"];
     }
     
     // We track the previous velocity, since it's important to determining how the character is and was moving for animations
