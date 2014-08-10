@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>35</integer>
+	<integer>36</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -146,7 +146,7 @@
 						<array>
 							<dict>
 								<key>UUID</key>
-								<integer>7</integer>
+								<integer>35</integer>
 								<key>baseClass</key>
 								<string>CCBFile</string>
 								<key>children</key>
@@ -159,87 +159,6 @@
 								<string>_character</string>
 								<key>memberVarAssignmentType</key>
 								<integer>1</integer>
-								<key>physicsBody</key>
-								<dict>
-									<key>affectedByGravity</key>
-									<true/>
-									<key>allowsRotation</key>
-									<false/>
-									<key>bodyShape</key>
-									<integer>0</integer>
-									<key>collisionCategories</key>
-									<array/>
-									<key>collisionMask</key>
-									<array/>
-									<key>collisionType</key>
-									<string></string>
-									<key>cornerRadius</key>
-									<real>0.0</real>
-									<key>density</key>
-									<real>1</real>
-									<key>dynamic</key>
-									<true/>
-									<key>elasticity</key>
-									<real>0.30000001192092896</real>
-									<key>friction</key>
-									<real>0.30000001192092896</real>
-									<key>points</key>
-									<array>
-										<array>
-											<real>3.875</real>
-											<real>-3.5546875</real>
-										</array>
-										<array>
-											<real>3.3125152587890625</real>
-											<real>43.027351379394531</real>
-										</array>
-										<array>
-											<real>40.832046508789062</real>
-											<real>96.007827758789062</real>
-										</array>
-										<array>
-											<real>92.464859008789062</real>
-											<real>94.660171508789062</real>
-										</array>
-										<array>
-											<real>123.42581176757812</real>
-											<real>44.207038879394531</real>
-										</array>
-										<array>
-											<real>125.39065551757812</real>
-											<real>-5.1171875</real>
-										</array>
-									</array>
-									<key>polygons</key>
-									<array>
-										<array>
-											<array>
-												<real>125.39065551757812</real>
-												<real>-5.1171875</real>
-											</array>
-											<array>
-												<real>123.42581176757812</real>
-												<real>44.207038879394531</real>
-											</array>
-											<array>
-												<real>92.464859008789062</real>
-												<real>94.660171508789062</real>
-											</array>
-											<array>
-												<real>40.832046508789062</real>
-												<real>96.007827758789062</real>
-											</array>
-											<array>
-												<real>3.3125152587890625</real>
-												<real>43.027351379394531</real>
-											</array>
-											<array>
-												<real>3.875</real>
-												<real>-3.5546875</real>
-											</array>
-										</array>
-									</array>
-								</dict>
 								<key>properties</key>
 								<array>
 									<dict>
@@ -257,11 +176,11 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>0.16373239457607269</real>
-											<real>0.53437501192092896</real>
+											<real>67</real>
+											<real>58</real>
 											<integer>0</integer>
-											<integer>2</integer>
-											<integer>2</integer>
+											<integer>0</integer>
+											<integer>0</integer>
 										</array>
 									</dict>
 									<dict>
@@ -271,8 +190,8 @@
 										<string>ScaleLock</string>
 										<key>value</key>
 										<array>
-											<real>1</real>
-											<real>1</real>
+											<real>0.76419806480407715</real>
+											<real>0.78669434785842896</real>
 											<false/>
 											<integer>0</integer>
 										</array>
@@ -286,8 +205,6 @@
 										<string>MyCharacter.ccb</string>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>

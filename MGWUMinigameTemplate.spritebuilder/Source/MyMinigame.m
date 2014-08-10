@@ -6,6 +6,7 @@
 //
 
 #import "MyMinigame.h"
+#import "MyCharacter.h"
 
 @implementation MyMinigame {
     CCNode *_contentNode;
@@ -31,6 +32,7 @@
     // We're calling a public method of the character that tells it to jump!
     //[self.hero jump];
     
+    self.userInteractionEnabled = TRUE;
     [self followCharacter];
     
     //[self.hero run];
@@ -51,6 +53,11 @@
     // Be sure you call this method when you end your minigame!
     // Of course you won't have a random score, but your score *must* be between 1 and 100 inclusive
     [self endMinigameWithScore:arc4random()%100 + 1];
+}
+
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    CCLOG(@"Test");
+    [self.hero jump];
 }
 
 // DO NOT DELETE!
