@@ -70,7 +70,7 @@
     // The animation should be idle if the character was and is stationary
     // The character may only start idling if he or she was not already idling or falling
     
-    if (_velYPrev == 0.0 && self.physicsBody.velocity.y == 0.0 && !_isRunning && !_isFalling) {
+    if (_velYPrev == 0 && self.physicsBody.velocity.y == 0 && !_isRunning && !_isFalling) {
         [self resetBools];
         _isRunning = YES;
         [self.animationManager runAnimationsForSequenceNamed:@"AnimSideWalking"];
@@ -78,7 +78,7 @@
     // JUMP
     // The animation should be jumping if the character wasn't moving up, but now is
     // The character may only start jumping if he or she was idling and isn't jumping
-    else if (_velYPrev == 0.0 && self.physicsBody.velocity.y > 0.0 && _isRunning && !_isJumping) {
+    else if (_velYPrev == 0 && self.physicsBody.velocity.y > 0 && _isRunning && !_isJumping) {
         [self resetBools];
         _isJumping = YES;
         [self.animationManager runAnimationsForSequenceNamed:@"AnimSideJump"];
@@ -95,13 +95,16 @@
     // LANDING
     // The animation sholud be landing if the character's stopped moving down (hit something)
     // The character may only start landing if he or she was falling and isn't landing
-    else if (_velYPrev < 0.0 && self.physicsBody.velocity.y >= 0.0 && _isFalling && !_isLanding) {
+    else if (_velYPrev < 0 && self.physicsBody.velocity.y >= 0 && _isFalling && !_isLanding) {
         [self resetBools];
         _isLanding = YES;
         [self.animationManager runAnimationsForSequenceNamed:@"AnimSideLand"];
     }
     else if (_isLanding) {
+        // Only here to deal with the wonky landing in mid-air error that occurs.
         [self resetBools];
+        _isRunning = YES;
+        [self.animationManager runAnimationsForSequenceNamed:@"AnimSideWalking"];
     }
     
     // We track the previous velocity, since it's important to determining how the character is and was moving for animations
