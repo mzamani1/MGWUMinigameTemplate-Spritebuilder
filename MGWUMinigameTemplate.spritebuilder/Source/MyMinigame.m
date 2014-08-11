@@ -34,8 +34,6 @@
     
     self.userInteractionEnabled = TRUE;
     [self followCharacter];
-    
-    //[self.hero run];
 }
 
 -(void)onEnter {

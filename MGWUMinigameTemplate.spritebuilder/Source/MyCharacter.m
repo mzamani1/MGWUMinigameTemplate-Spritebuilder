@@ -34,10 +34,6 @@
     
 }
 
--(void)startRunningRight {
-    [self.animationManager runAnimationsForSequenceNamed:@"AnimSideWalking"];
-}
-
 -(void)onEnter {
     [super onEnter];
     // Create anything you'd like to draw here
@@ -50,13 +46,6 @@
     
     // This sample method is called every update to handle character animation
     [self updateAnimations:delta];
-    
-    CCLOG(@"Landing: %hhd", _isLanding);
-    CCLOG(@"Falling: %hhd", _isFalling);
-    CCLOG(@"Jumping: %hhd", _isJumping);
-    CCLOG(@"Running: %hhd", _isRunning);
-    CCLOG(@"VelYPrev: %f ;  Y Velocity %f", _velYPrev, self.physicsBody.velocity.y);
-    CCLOG(@"%hhd %hhd %hhd %hhd", _velYPrev == 0.0, self.physicsBody.velocity.y == 0.0, !_isRunning, !_isFalling);
     
     if (_isRunning) {
         [self run];
