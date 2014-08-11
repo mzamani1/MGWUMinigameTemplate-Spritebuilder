@@ -241,8 +241,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>103</real>
-											<real>77</real>
+											<real>73</real>
+											<real>60</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -370,7 +370,7 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>387</real>
+											<real>386</real>
 											<real>55</real>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -744,79 +744,6 @@
 						<string>_contentNode</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
-						<key>physicsBody</key>
-						<dict>
-							<key>affectedByGravity</key>
-							<true/>
-							<key>allowsRotation</key>
-							<true/>
-							<key>bodyShape</key>
-							<integer>0</integer>
-							<key>collisionCategories</key>
-							<array/>
-							<key>collisionMask</key>
-							<array/>
-							<key>collisionType</key>
-							<string></string>
-							<key>cornerRadius</key>
-							<real>0.0</real>
-							<key>density</key>
-							<real>1</real>
-							<key>dynamic</key>
-							<false/>
-							<key>elasticity</key>
-							<real>0.30000001192092896</real>
-							<key>friction</key>
-							<real>0.30000001192092896</real>
-							<key>points</key>
-							<array>
-								<array>
-									<real>0.0</real>
-									<real>0.0</real>
-								</array>
-								<array>
-									<real>0.0</real>
-									<real>320</real>
-								</array>
-								<array>
-									<real>329.85159301757812</real>
-									<real>320.78909301757812</real>
-								</array>
-								<array>
-									<real>568</real>
-									<real>320</real>
-								</array>
-								<array>
-									<real>568</real>
-									<real>0.0</real>
-								</array>
-							</array>
-							<key>polygons</key>
-							<array>
-								<array>
-									<array>
-										<real>568</real>
-										<real>0.0</real>
-									</array>
-									<array>
-										<real>568</real>
-										<real>320</real>
-									</array>
-									<array>
-										<real>329.85159301757812</real>
-										<real>320.78909301757812</real>
-									</array>
-									<array>
-										<real>0.0</real>
-										<real>320</real>
-									</array>
-									<array>
-										<real>0.0</real>
-										<real>0.0</real>
-									</array>
-								</array>
-							</array>
-						</dict>
 						<key>properties</key>
 						<array>
 							<dict>
