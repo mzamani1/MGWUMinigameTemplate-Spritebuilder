@@ -242,7 +242,7 @@
 										<key>value</key>
 										<array>
 											<real>73</real>
-											<real>60</real>
+											<real>58</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -270,8 +270,6 @@
 										<string>MyCharacter.ccb</string>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
@@ -281,7 +279,7 @@
 								<key>children</key>
 								<array/>
 								<key>customClass</key>
-								<string></string>
+								<string>Obstacle</string>
 								<key>displayName</key>
 								<string>box_wood_1</string>
 								<key>memberVarAssignmentName</key>
@@ -370,7 +368,7 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>386</real>
+											<real>385</real>
 											<real>55</real>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -426,6 +424,8 @@
 										</array>
 									</dict>
 								</array>
+								<key>selected</key>
+								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>

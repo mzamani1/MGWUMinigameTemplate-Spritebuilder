@@ -6,23 +6,26 @@
 //
 
 #import "MyMinigame.h"
+#import "CCPhysics+ObjectiveChipmunk.h"
 #import "MyCharacter.h"
 
 @implementation MyMinigame {
     CCNode *_contentNode;
+    CCPhysicsNode *_physicsNode;
+    CCAction *_followCharacter;
 }
 
 -(id)init {
     if ((self = [super init])) {
         // Initialize any arrays, dictionaries, etc in here
-        self.instructions = @"These are the game instructions :D";
+        self.instructions = @"Make it to the end! Don't run into an obstacle. Tap to jump.";
     }
     return self;
 }
 
 - (void) followCharacter {
     self.position = ccp(0, 0);
-    CCAction *follow = [CCActionFollow actionWithTarget:_hero worldBoundary:self.boundingBox];
+    CCAction *follow = [CCActionFollow actionWithTarget:self.hero worldBoundary:self.boundingBox];
     [_contentNode runAction:follow];
 }
 
@@ -30,10 +33,13 @@
     // Set up anything connected to Sprite Builder here
     
     // We're calling a public method of the character that tells it to jump!
-    //[self.hero jump];
+    
+    _physicsNode.debugDraw = TRUE;
+    _physicsNode.collisionDelegate = self;
     
     self.userInteractionEnabled = TRUE;
-    [self followCharacter];
+    _followCharacter = [CCActionFollow actionWithTarget:self.hero worldBoundary:self.boundingBox];
+    [_contentNode runAction:_followCharacter];
 }
 
 -(void)onEnter {
@@ -47,6 +53,12 @@
     // delta will tell you how much time has passed since the last cycle (in seconds)
 }
 
+- (void) ccPhysicsCollisionPostSolve: (CCPhysicsCollisionPair *)pair obstacle:(CCNode *)nodeA wildcard:(CCNode *)nodeB {
+    [[_physicsNode space] addPostStepBlock:^{
+        [self endMinigame];
+    } key:nodeA];
+}
+
 -(void)endMinigame {
     // Be sure you call this method when you end your minigame!
     // Of course you won't have a random score, but your score *must* be between 1 and 100 inclusive
@@ -54,7 +66,6 @@
 }
 
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    CCLOG(@"Test");
     [self.hero jump];
 }
 
