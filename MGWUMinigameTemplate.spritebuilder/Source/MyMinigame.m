@@ -53,7 +53,7 @@
     // delta will tell you how much time has passed since the last cycle (in seconds)
 }
 
-- (void) ccPhysicsCollisionPostSolve: (CCPhysicsCollisionPair *)pair obstacle:(CCNode *)nodeA wildcard:(CCNode *)nodeB {
+- (void) ccPhysicsCollisionPostSolve: (CCPhysicsCollisionPair *)pair obstacle:(CCNode *)nodeA hero:(CCNode *)nodeB {
     [[_physicsNode space] addPostStepBlock:^{
         [self endMinigame];
     } key:nodeA];

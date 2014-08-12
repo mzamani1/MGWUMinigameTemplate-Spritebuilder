@@ -30,7 +30,7 @@
 -(void)didLoadFromCCB {
     // Set up anything connected to Sprite Builder here
     
-    //[self performSelector:@selector(startRunningRight) withObject:nil];
+    self.physicsBody.collisionType = @"hero";
     
 }
 
